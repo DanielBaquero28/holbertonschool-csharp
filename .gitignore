@@ -1,0 +1,6 @@
+# Ignoring unwanted files
+*~
+*#
+# Ignoring unwated directories
+obj/
+bin/
