@@ -18,5 +18,5 @@
     </body>
     <br>
     <br>
-    <footer>Made by: <strong>[Daniel Baquero](https://github.com/DanielBaquero28 "GitHub Repos")</strong></footer>
+    Made by: [Daniel Baquero](https://github.com/DanielBaquero28 "GitHub Repos")
 </html>
