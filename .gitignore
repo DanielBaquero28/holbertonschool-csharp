@@ -4,3 +4,5 @@
 # Ignoring unwated directories
 obj/
 bin/
+# Ignoring main files
+*-main.cs
