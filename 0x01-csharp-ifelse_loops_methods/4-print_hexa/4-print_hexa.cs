@@ -11,7 +11,6 @@ namespace _4_print_hexa
             for (i = 0; i <= 98; i++)
             {
                 Console.Write("{0} = 0x{0:x}\n", i);
-                
             }
         }
     }
