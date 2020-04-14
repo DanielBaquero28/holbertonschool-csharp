@@ -8,21 +8,11 @@ namespace _5_print_comb
         {
             int i;
 
-            for (i = 0; i < 100; i++)
+            for (i = 0; i < 99; i++)
             {
-                if (i == 99)
-                {
-                    Console.WriteLine("{0}", i);
-                }
-                else if (i < 10)
-                {
-                    Console.Write("{0:00}, ", i);
-                }
-                else
-                {
-                    Console.Write("{0}, ", i);
-                }
+                    Console.Write("{0:D2}, ", i);
             }
+            Console.Write("99\n");
         }
     }
 }
