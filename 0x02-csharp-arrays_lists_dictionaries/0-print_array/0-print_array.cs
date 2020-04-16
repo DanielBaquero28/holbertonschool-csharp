@@ -13,17 +13,24 @@ class Array
             return (null);
         }
 
+        if (size == 0)
+        {
+            System.Console.WriteLine();
+            return (arr);
+        }
+
         for (i = 0; i < size; i++)
         {
-            arr[i] = i;
             if (i < size - 1)
             {
-                System.Console.Write(arr[i] + " ");
+                System.Console.Write("{0} ", i);
             }
             else
             {
-                System.Console.WriteLine(arr[i]);
+                System.Console.WriteLine(i);
             }
+
+            arr[i] = i;
         }
 
         return (arr);
