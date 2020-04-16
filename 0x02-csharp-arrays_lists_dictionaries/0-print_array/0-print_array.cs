@@ -15,9 +15,12 @@ class Array
 
         for (i = 0; i < size - 1; i++)
         {
-            System.Console.Write("{0} ", i);
+            arr[i] = i;
+            System.Console.Write(arr[i] + " ");
         }
-        System.Console.WriteLine("{0}", i);
+        arr[i] = i; 
+        System.Console.WriteLine(arr[i]);
+
         return (arr);
     }
 }
