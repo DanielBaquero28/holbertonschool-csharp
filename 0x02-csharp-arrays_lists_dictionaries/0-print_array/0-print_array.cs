@@ -10,7 +10,7 @@ class Array
             return (null);
         }
 
-        var arr = new int[size];
+        int[] arr = new int[size];
         if (size == 0)
         {
         Console.WriteLine();
