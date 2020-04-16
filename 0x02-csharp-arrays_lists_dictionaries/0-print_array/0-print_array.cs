@@ -13,13 +13,18 @@ class Array
             return (null);
         }
 
-        for (i = 0; i < size - 1; i++)
+        for (i = 0; i < size; i++)
         {
             arr[i] = i;
-            System.Console.Write(arr[i] + " ");
+            if (i < size - 1)
+            {
+                System.Console.Write(arr[i] + " ");
+            }
+            else
+            {
+                System.Console.WriteLine(arr[i]);
+            }
         }
-        arr[i] = i; 
-        System.Console.WriteLine(arr[i]);
 
         return (arr);
     }
