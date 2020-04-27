@@ -14,21 +14,21 @@ class MyStack
         else
         {
             string topStack = aStack.Peek();
-            Console.WriteLine("Top Item: {0}", topStack);
+            Console.WriteLine("Top item: {0}", topStack);
         }
         if (aStack.Contains(search))
         {
             Console.WriteLine("Stack contains \"{0}\": True", search);
-            while(aStack.Contains(search))
+            while (aStack.Contains(search))
             {
                 aStack.Pop();
             }
-        }
+        }                
         else
         {
             Console.WriteLine("Stack contains \"{0}\": False", search);
         }
         aStack.Push(newItem);
-        return(aStack);
+        return aStack;
     }
 }
