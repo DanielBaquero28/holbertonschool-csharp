@@ -7,7 +7,7 @@ class LList
     {
         if (myLList.Count <= 0)
         {
-            return(-1);
+            return(0);
         }
         
         LinkedListNode<int> headNode = new LinkedListNode<int>(myLList.First.Value);
