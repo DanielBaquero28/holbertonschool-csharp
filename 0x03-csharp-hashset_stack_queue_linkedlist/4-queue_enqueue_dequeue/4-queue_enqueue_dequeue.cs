@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 class MyQueue
 {
     public static Queue<string> Info(Queue<string> aQueue, string newItem, string search)
@@ -26,7 +27,7 @@ class MyQueue
         }
         else
         {
-            Console.WriteLine("Queue contains \"{0}\": False");
+            Console.WriteLine("Queue contains \"{0}\": False", search);
         }
         return(aQueue);
     }
