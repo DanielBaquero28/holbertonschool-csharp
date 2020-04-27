@@ -5,8 +5,9 @@ class MyStack
 {
     public static Stack<string> Info(Stack<string> aStack, string newItem, string search)
     {
-        Console.WriteLine("Number of items: {0}", aStack.Count);
-        if (aStack.Count == 0)
+        int count = aStack.Count;
+        Console.WriteLine("Number of items: {0}", count);
+        if (count <= 0)
         {
             Console.WriteLine("Stack is empty");
         }
@@ -15,7 +16,6 @@ class MyStack
             string topStack = aStack.Peek();
             Console.WriteLine("Top Item: {0}", topStack);
         }
-
         if (aStack.Contains(search))
         {
             Console.WriteLine("Stack contains \"{0}\": True", search);
@@ -28,9 +28,7 @@ class MyStack
         {
             Console.WriteLine("Stack contains \"{0}\": False", search);
         }
-
         aStack.Push(newItem);
-
         return(aStack);
     }
 }
