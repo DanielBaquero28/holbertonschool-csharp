@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+
 class MyStack
 {
     public static Stack<string> Info(Stack<string> aStack, string newItem, string search)
     {
         Console.WriteLine("Number of items: {0}", aStack.Count);
-        string topStack = aStack.Peek();
         if (aStack.Count == 0)
         {
             Console.WriteLine("Stack is empty");
         }
         else
         {
+            string topStack = aStack.Peek();
             Console.WriteLine("Top Item: {0}", topStack);
         }
 
@@ -27,6 +28,7 @@ class MyStack
         {
             Console.WriteLine("Stack contains \"{0}\": False", search);
         }
+
         aStack.Push(newItem);
 
         return(aStack);
