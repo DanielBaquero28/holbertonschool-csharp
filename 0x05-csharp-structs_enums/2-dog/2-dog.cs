@@ -19,6 +19,7 @@ struct Dog
         age = Age;
         owner = Owner;
         rating = Rat;
+        
     }
     
 }
