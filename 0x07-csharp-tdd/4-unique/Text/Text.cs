@@ -7,7 +7,7 @@ namespace Text
     {
         /// <summary> Finds index of first non-repeated character </summary>
         /// <returns> Index of unique character of a string </returns>
-        public static int UniqueCharacter(string s)
+        public static int UniqueChar(string s)
         {
             // Initialize index at one if there is no non-repeated number
             int index = -1;

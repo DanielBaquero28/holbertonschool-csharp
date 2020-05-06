@@ -2,23 +2,23 @@ using NUnit.Framework;
 
 namespace Text.Tests
 {
-    public class UniqueCharacterTests
+    public class UniqueCharTests
     {
         [Test]
         public void NonDuplicatedCharacter()
         {
             string s = "session";
 
-            int result = Text.Str.UniqueCharacter(s);
+            int result = Text.Str.UniqueChar(s);
             Assert.AreEqual(1, result);
         }
 
         [Test]
-        public void AllDuplicateCharacters()
+        public void AllDuplicateChar()
         {
             string s = "mama";
 
-            int result = Text.Str.UniqueCharacter(s);
+            int result = Text.Str.UniqueChar(s);
             Assert.AreEqual(-1, result);
         }
 
@@ -27,7 +27,7 @@ namespace Text.Tests
         {
             string s = "s";
 
-            int result = Text.Str.UniqueCharacter(s);
+            int result = Text.Str.UniqueChar(s);
             Assert.AreEqual(0, result);
         }
 
@@ -36,7 +36,7 @@ namespace Text.Tests
         {
             string s = "palindrome";
 
-            int result = Text.Str.UniqueCharacter(s);
+            int result = Text.Str.UniqueChar(s);
             Assert.AreEqual(0, result);
         }
 
@@ -45,7 +45,7 @@ namespace Text.Tests
         {
             string s = "hghghghghj";
 
-            int result = Text.Str.UniqueCharacter(s);
+            int result = Text.Str.UniqueChar(s);
             Assert.AreEqual(9, result);
         }
 
@@ -54,7 +54,7 @@ namespace Text.Tests
         {
             string s = string.Empty;
 
-            int result = Text.Str.UniqueCharacter(s);
+            int result = Text.Str.UniqueChar(s);
             Assert.AreEqual(-1, result);
         }
     }
