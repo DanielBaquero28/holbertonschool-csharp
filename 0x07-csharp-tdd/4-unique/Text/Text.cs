@@ -17,6 +17,7 @@ namespace Text
             {
                 countChar[s[i]]++;
             }
+
             for (int j = 0; j < s.Length; j++)
             {
                 if (countChar[s[j]] == 1)
