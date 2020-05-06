@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Str.Tests
+namespace Text.Tests
 {
     public class UniqueCharacterTests
     {
@@ -34,19 +34,28 @@ namespace Str.Tests
         [Test]
         public void AtTheBeginning()
         {
-            string s = "level";
+            string s = "palindrome";
 
             int result = Text.Str.UniqueCharacter(s);
-            Assert.AreEqual(2, result);
+            Assert.AreEqual(0, result);
         }
 
          [Test]
         public void AtTheEnd()
         {
-            string s = "css";
+            string s = "hghghghghj";
 
             int result = Text.Str.UniqueCharacter(s);
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(9, result);
+        }
+
+        [Test]
+        public void IfEmptyString()
+        {
+            string s = string.Empty;
+
+            int result = Text.Str.UniqueCharacter(s);
+            Assert.AreEqual(-1, result);
         }
     }
 }

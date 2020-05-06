@@ -9,28 +9,17 @@ namespace Text
         /// <returns> Index of unique character of a string </returns>
         public static int UniqueCharacter(string s)
         {
-            if (s.Length == 1)
-            {
-                return (0);
-            }
-
-            char[] countChar = new char[256];
             // Initialize index at one if there is no non-repeated number
             int index = -1;
-
+            char[] countChar = new char[256];
             // Counting the number of times each character in s is repeated
             for (int i = 0; i < s.Length; i++)
             {
                 countChar[s[i]]++;
             }
-
             for (int j = 0; j < s.Length; j++)
             {
-                if (countChar[s[j]] != 1)
-                {
-                    continue;
-                }
-                else
+                if (countChar[s[j]] == 1)
                 {
                     index = j;
                     break;
@@ -38,7 +27,6 @@ namespace Text
             }
 
             return (index);
-
         }
     }
 }
