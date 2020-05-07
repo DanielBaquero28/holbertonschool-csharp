@@ -15,7 +15,7 @@ class Obj
         System.Console.WriteLine("{0} Properties:", objInfo.Name);
         for (int i = 0; i < propertiesInfo.Length; i++)
         {
-            System.Console.WriteLine(propertiesInfo[i]);
+            System.Console.WriteLine(propertiesInfo[i].Name);
         }
 
         // Methods Info
@@ -23,7 +23,7 @@ class Obj
         System.Console.WriteLine("{0} Methods:", objInfo.Name);
         for (int i = 0; i < methodInfo.Length; i++)
         {
-            System.Console.WriteLine(methodInfo[i]);
+            System.Console.WriteLine(methodInfo[i].Name);
         }
 
     }
