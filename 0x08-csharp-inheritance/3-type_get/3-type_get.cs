@@ -8,19 +8,19 @@ class Obj
     /// <returns> Nothing </returns>
     public static void Print(object myObj)
     {
-        var t = myObj.GetType().GetTypeInfo();
+        var objInfo = myObj.GetType().GetTypeInfo();
 
         // Properties Info
-        PropertyInfo[] propertiesInfo = t.GetProperties();
-        System.Console.WriteLine("{0} Properties:", t.Name);
+        PropertyInfo[] propertiesInfo = objInfo.GetProperties();
+        System.Console.WriteLine("{0} Properties:", objInfo.Name);
         for (int i = 0; i < propertiesInfo.Length; i++)
         {
             System.Console.WriteLine(propertiesInfo[i]);
         }
 
         // Methods Info
-        MethodInfo[] methodInfo = t.GetMethods();
-        System.Console.WriteLine("{0} Methods:", t.Name);
+        MethodInfo[] methodInfo = objInfo.GetMethods();
+        System.Console.WriteLine("{0} Methods:", objInfo.Name);
         for (int i = 0; i < methodInfo.Length; i++)
         {
             System.Console.WriteLine(methodInfo[i]);
