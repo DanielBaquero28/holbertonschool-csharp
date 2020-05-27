@@ -20,7 +20,7 @@ class VectorMath
 
         if (vector1.Length != vector2.Length)
         {
-            return (f_vector)
+            return (f_vector);
         }
 
         double[] r_vector = new double[vector1.Length];
