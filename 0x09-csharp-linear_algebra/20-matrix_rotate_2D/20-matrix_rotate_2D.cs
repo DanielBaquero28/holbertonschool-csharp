@@ -16,12 +16,12 @@ class MatrixMath
 
         double[,] rotate_matrix = {{Math.Cos(angle), Math.Sin(angle)}, {Math.Sin(angle) * -1, Math.Cos(angle)}};
         double result = 0;
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        for (int i = 0; i < 2; i++)
         {
-            for (int j = 0; j < matrix.GetLength(1); j++)
+            for (int j = 0; j < 2; j++)
             {
                 result = 0;
-                for (int k = 0; k < matrix.GetLength(1); k++)
+                for (int k = 0; k < 2; k++)
                 {
                     result += Math.Round(matrix[i, k] * rotate_matrix[k, j], 2);
                 }
@@ -29,7 +29,6 @@ class MatrixMath
                 r_matrix[i, j] = result;
             }
         }
-
         return (r_matrix);
     }
 }
