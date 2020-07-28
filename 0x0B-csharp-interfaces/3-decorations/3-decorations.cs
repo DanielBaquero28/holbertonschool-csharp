@@ -58,35 +58,29 @@ public class Decoration : Base, IInteractive, IBreakable
     public bool isQuestItem = false;
 
     /// <summary> Decoration Constructor </summary>
-    public Decoration(string _name = "Decoration", int _durability = 1, bool _isQuestItem = false)
+    public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
-        if (_durability <= 0)
+        if (durability <= 0)
             throw new Exception("Durability must be greater than 0");
-        this.name = _name;
-        this.durability = _durability;
-        this.isQuestItem = _isQuestItem;
+        this.name = name;
+        this.durability = durability;
+        this.isQuestItem = isQuestItem;
     }
 
     /// <summary> Prints a message regarding the decoration of the door </summary>
     public void Interact()
     {
-        if (this.durability <= 0)
-            System.Console.WriteLine("The {0} has been broken.", this.name);
-        else if (this.isQuestItem == true)
-            System.Console.WriteLine("You look at the {0}. There's a key inside.", this.name);
-        else
-            System.Console.WriteLine("You look at the {0}. Not much to see here.", this.name);
+        if (this.durability <= 0) System.Console.WriteLine("The {0} has been broken.", this.name);
+        else if (this.isQuestItem == true) System.Console.WriteLine("You look at the {0}. There's a key inside.", this.name);
+        else System.Console.WriteLine("You look at the {0}. Not much to see here.", this.name);
     }
 
     /// <summary> Handles the Break actions when they take place </summary>
     public void Break()
     {
         this.durability--;
-        if (this.durability > 0)
-            System.Console.WriteLine("You hit the {0}. It cracks.", this.name);
-        if (this.durability == 0)
-            System.Console.WriteLine("You smash the {0}. What a mess.", this.name);
-        if (this.durability < 0)
-            System.Console.WriteLine("The {0} is already broken.", this.name);
+        if (this.durability > 0) System.Console.WriteLine("You hit the {0}. It cracks.", this.name);
+        if (this.durability == 0) System.Console.WriteLine("You smash the {0}. What a mess.", this.name);
+        if (this.durability < 0) System.Console.WriteLine("The {0} is already broken.", this.name);
     }
 }
