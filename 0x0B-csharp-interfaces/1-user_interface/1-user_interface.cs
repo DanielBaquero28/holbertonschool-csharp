@@ -4,7 +4,7 @@
 public abstract class Base
 {
     /// <summary> Name Variable </summary>
-    public string name{ get; set; }
+    public string name;
 
     /// <summary> Overrides ToString() to desired result</summary>
     public override string ToString()
