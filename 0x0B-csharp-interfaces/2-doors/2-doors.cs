@@ -37,12 +37,9 @@ interface ICollectable
 public class Door : Base, IInteractive
 {
     /// <summary> Door Constructor </summary>
-    public Door(string _name)
+    public Door(string _name = "Door")
     {
-        if (_name == null)
-            this.name = "Door";
-        else
-            this.name = _name;
+        this.name = _name;
     }
 
     /// <summary> Prints a message when the door interacts with something </summary>
