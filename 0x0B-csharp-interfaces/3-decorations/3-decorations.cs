@@ -55,7 +55,7 @@ public class Decoration : Base, IInteractive, IBreakable
     /// <summary> Durability Property</summary>
     public int durability { get; set; }
     /// <summary> In charge of knowing if it has a QuestItem </summary>
-    public bool isQuestItem;
+    public bool isQuestItem = false;
 
     /// <summary> Decoration Constructor </summary>
     public Decoration(string _name = "Decoration", int _durability = 1, bool _isQuestItem = false)
@@ -80,7 +80,7 @@ public class Decoration : Base, IInteractive, IBreakable
     {
         this.durability--;
         if (this.durability > 0) System.Console.WriteLine("You hit the {0}. It cracks.", this.name);
-        else if (this.durability == 0) System.Console.WriteLine("You smash the {0}. What a mess.", this.name);
-        else if (this.durability < 0) System.Console.WriteLine("The {0} is already broken.", this.name);
+        if (this.durability == 0) System.Console.WriteLine("You smash the {0}. What a mess.", this.name);
+        if (this.durability < 0) System.Console.WriteLine("The {0} is already broken.", this.name);
     }
 }
