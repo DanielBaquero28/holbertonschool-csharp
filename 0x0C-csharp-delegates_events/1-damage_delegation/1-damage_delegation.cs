@@ -27,30 +27,29 @@ class Player
     }
 
     /// <summary> Delegate which handles the Health </summary>
-    public delegate void CalculateHealth(float dmg);
+    delegate void CalculateHealth(float dmg);
 
     /// <summary> Handles Damage Health and apllies it to the hp </summary>
     public void TakeDamage(float damage)
-    {
-        System.Console.WriteLine("{0} takes {1} damage!", this.name, damage);
-        if (damage < 0f)
+	{
+		System.Console.WriteLine("{0} takes {1} damage!", this.name, damage);
+		if (damage < 0f)
         {
-            damage = 0f;
-            System.Console.WriteLine("{0} takes 0 damage!");
+            System.Console.WriteLine("{0} takes 0 damage!", this.name);
+			damage = 0f;
         }
-        this.hp -= damage;
-    }
+		this.hp -= damage;
+	}
 
     /// <summary> Handles Healing and applies it to the hp </summary>
     public void HealDamage(float heal)
-    {
-        System.Console.WriteLine("{0} heals {1} HP!", this.name, heal);
-        if (heal < 0f)
-        {
-            heal = 0f;
+	{
+		Console.WriteLine("{0} heals {1} HP!", this.name, heal);
+		if (heal < 0f)
+        {   
             System.Console.WriteLine("{0} heals 0 damage!", this.name);
+			heal = 0f;
         }
-
-        this.hp += heal;
-    }
+		this.hp += heal;
+	}
 }
