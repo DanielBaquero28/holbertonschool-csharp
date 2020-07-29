@@ -15,9 +15,9 @@ class Player
         else
         {
             this.maxHp = 100f;
-            System.Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default");
+            System.Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
         }
-        this.hp = maxHp;
+        this.hp = this.maxHp;
     }
 
     /// <summary> Prints the Player's current health </summary>
