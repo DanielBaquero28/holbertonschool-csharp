@@ -1,7 +1,7 @@
 ﻿using System;
 
 /// <summary> Player Class which handles the Player attributes and actions </summary>
-public class Player
+class Player
 {
     string name;
     float maxHp;
@@ -23,6 +23,6 @@ public class Player
     /// <summary> Prints the Player's current health </summary>
     public void PrintHealth()
     {
-        System.Console.WriteLine("{0} has {1} / {2} health.", this.name, this.hp, this.maxHp);
+        System.Console.WriteLine("{0} has {1} / {2} health", this.name, this.hp, this.maxHp);
     }
 }
