@@ -142,5 +142,5 @@ Replace the call to HPCheck() in ValidateHP() with a call to OnCheckStatus().
 </body>
 <br>
 <br>
-<footer>Made by: <strong><a href=“https://github.com/DanielBaquero28”>Daniel Baquero</a></strong></footer>
+<footer>Made by: <strong><a href="https://github.com/DanielBaquero28">Daniel Baquero</a></strong></footer>
 </html>
