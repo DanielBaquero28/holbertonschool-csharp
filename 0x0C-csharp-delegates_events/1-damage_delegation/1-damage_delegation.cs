@@ -39,7 +39,7 @@ class Player
         }
         else
             System.Console.WriteLine("{0} takes {1} damage!", this.name, damage);
-		this.hp -= damage;
+		    this.hp -= damage;
 	}
 
     /// <summary> Handles Healing and applies it to the hp </summary>
@@ -52,6 +52,6 @@ class Player
         }
         else
             Console.WriteLine("{0} heals {1} HP!", this.name, heal);
-		this.hp += heal;
+		    this.hp += heal;
 	}
 }
