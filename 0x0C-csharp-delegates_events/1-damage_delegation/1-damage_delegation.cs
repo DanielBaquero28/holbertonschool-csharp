@@ -27,7 +27,7 @@ class Player
     }
 
     /// <summary> Delegate which handles the Health </summary>
-    delegate void CalculateHealth(float dmg);
+    delegate void CalculateHealth(float damage);
 
     /// <summary> Handles Damage Health and apllies it to the hp </summary>
     public void TakeDamage(float damage)
