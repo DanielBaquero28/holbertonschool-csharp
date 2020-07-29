@@ -32,24 +32,26 @@ class Player
     /// <summary> Handles Damage Health and apllies it to the hp </summary>
     public void TakeDamage(float damage)
 	{
-		System.Console.WriteLine("{0} takes {1} damage!", this.name, damage);
 		if (damage < 0f)
         {
             System.Console.WriteLine("{0} takes 0 damage!", this.name);
 			damage = 0f;
         }
+        else
+            System.Console.WriteLine("{0} takes {1} damage!", this.name, damage);
 		this.hp -= damage;
 	}
 
     /// <summary> Handles Healing and applies it to the hp </summary>
     public void HealDamage(float heal)
 	{
-		Console.WriteLine("{0} heals {1} HP!", this.name, heal);
 		if (heal < 0f)
         {   
             System.Console.WriteLine("{0} heals 0 damage!", this.name);
 			heal = 0f;
         }
+        else
+            Console.WriteLine("{0} heals {1} HP!", this.name, heal);
 		this.hp += heal;
 	}
 }
